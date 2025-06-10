@@ -1,0 +1,55 @@
+
+
+eslint installlation
+
+run:-
+npm init -y
+
+install eslint:-
+npm init @eslint/config@latest
+and do required setup which is asked in terminal
+crate a js file
+npx eslint yourfile.js 
+
+add rules inside eslint.config.mjs eg:-
+    {
+		rules: {
+			"no-unused-vars": "warn",
+			"no-undef": "warn",
+            'capitalized-comments': ['error', 'always'],
+		},
+	},
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+prettier installlation:
+install prettier:-
+npm i -D prettier
+
+go to setting of vscode:-
+in Editor: Default Formatter: select prettier- code Formatter
+in Editor: Format On Save: tick
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+configiration of eslint and prettier so that eslint will correct the mistakes in the code and prettier will format the code accordingly 
+
+install:-
+npm install --save-dev eslint-config-prettier eslint-plugin-prettier
+
+add this below two line inside eslint.config.mjs file accordingly
+    import eslintPluginPrettier from 'eslint-plugin-prettier/recommended'
+    eslintPluginPrettier,
+
+add .vscode folder in project root directory and inside that create a file called settings.json and add this below content
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
+
+
+
+
+
+
