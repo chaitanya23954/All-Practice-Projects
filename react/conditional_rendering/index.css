@@ -1,0 +1,17 @@
+.login {
+  font-size: 2.5em;
+  background-color: hsl(60, 36%, 35%);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.failed {
+  font-size: 2.5em;
+  background-color: hsl(0, 36%, 35%);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
